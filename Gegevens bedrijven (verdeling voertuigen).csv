@@ -1,0 +1,61 @@
+Bedrijfsnaam,Producten,Sector,Vrachtwagens,e-vrachtwagens,Bestelbusjes,e-bestelbusjes,Minimum afstand,Maximum afstand,Gemiddelde afstand,TKM Vrachtwagens,TKM e-vrachtwagens,TKM Bestelbusjes,TKM e-bestelbusjes,Consumptie Vrachtwagens,Consumptie e-vrachtwagens,Consumptie Bestelbusjes,Consumptie e-bestelbusjes
+Best Trucks,Vrachtwagens,Automotive,15,0,15,0,100,200,600,9000,0,9000,0,270,63,0,0
+Berkman Groep,"Brandstoffen, tankstations",Energie,10,0,10,0,50,150,600,6000,0,6000,0,180,42,0,0
+4 Fruit Company,"Fruit, groente",Handel,15,1,20,1,50,100,600,9000,9000,12000,600,270,84,162,0.9
+4 Potato Holland B.V.,Aardappels,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Agrofair Benelux,Fruit,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Ambtman jr. Import Export B.V.,Voedsel,Handel,8,0,12,0,50,100,600,4800,0,7200,0,144,50.4,0,0
+Angus Soft Fruits B.V.,Fruit,Handel,8,0,12,0,50,100,600,4800,0,7200,0,144,50.4,0,0
+Fresh Pride,Fruit,Handel,15,1,20,1,50,100,600,9000,9000,12000,600,270,84,162,0.9
+Fresh2You,"Fruit, groente",Handel,12,1,18,1,50,100,600,7200,7200,10800,600,216,75.6,129.6,0.9
+Fruit Queen B.V.,"Fruit, groente",Handel,12,0,18,0,50,100,600,7200,0,10800,0,216,75.6,0,0
+Frukar B.V.,Fruit,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Frutyco B.V.,"Fruit, groente",Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Hars & Hagebauer B.V.,"Fruit, groente",Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Jaguar The Fresh Company B.V.,Fruit,Handel,15,1,20,1,50,100,600,9000,9000,12000,600,270,84,162,0.9
+Keelings Fresh International Limited,"Fruit, groente, bloemen",Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Niva Fresh International,"Fruit, groente",Handel,12,1,18,1,50,100,600,7200,7200,10800,600,216,75.6,129.6,0.9
+OV Fruit B.V.,Fruit,Handel,15,1,20,1,50,100,600,9000,9000,12000,600,270,84,162,0.9
+Purnatur,Fruit,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Rivafruit B.V. ,"Fruit, groente",Handel,12,1,18,1,50,100,600,7200,7200,10800,600,216,75.6,129.6,0.9
+Rungis B.V.,"fruit, groente, groothandel",Handel,12,1,18,1,50,100,600,7200,7200,10800,600,216,75.6,129.6,0.9
+Sawari Fresh International B.V.,Groente,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Torres Tropical B.V.,Fruit,Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Van Ooijen Citrus B.V.,"Fruit, groente",Handel,10,1,15,1,50,100,600,6000,6000,9000,600,180,63,108,0.9
+Van Vugt Kruiden,"Groente, kruiden",Handel,10,1,15,1,50,100,600,6000,6000,9000,600,180,63,108,0.9
+Verita Holland BV,Fruit,Handel,12,1,18,1,50,100,600,7200,7200,10800,600,216,75.6,129.6,0.9
+Very Fruity B.V.,Fruit (retail),Handel,10,0,15,0,50,100,600,6000,0,9000,0,180,63,0,0
+Bakker Barendrecht,"Fruit, groente","Handel, logistiek",55,2,60,2,100,150,600,33000,66000,36000,1200,990,252,1188,1.8
+Broom Frio Holding,Fruit,"Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+CMR Holland B.V.,"Fruit, groente","Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+Europe Retail Packing Barendrecht B.V.,"Handel, verpakkingen, value-added logistics (VAL)","Handel, logistiek",35,2,55,2,100,150,600,21000,42000,33000,1200,630,231,756,1.8
+Fortuna Frutos Continental B.V.,"Groeten, fruit. Import groothandel (VAL)","Handel, logistiek",25,1,40,1,100,150,600,15000,15000,24000,600,450,168,270,0.9
+FruitOne Europe B.V.,Fruit,"Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+Hoofdman & Roodzand B.V.,"Fruit, groente","Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+Van Gelder Groente & Fruit,AGF,"Handel, logistiek",55,2,60,2,100,150,600,33000,66000,36000,1200,990,252,1188,1.8
+VerDi Import B.V. ,"Fruit, groeten","Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+Zoutewelle Import Export B.V.,"Fruit, groente","Handel, logistiek",20,1,30,1,100,150,600,12000,12000,18000,600,360,126,216,0.9
+Four Seasons Fruit Supply,Fruit,"Handel, logistiek, transport",35,2,55,2,100,150,600,21000,42000,33000,1200,630,231,756,1.8
+Frosinn B.V.,"Fruit, bevroren","Handel, logistiek, transport",15,1,25,1,100,150,600,9000,9000,15000,600,270,105,162,0.9
+Davis Global B.V.,Voedsel,"Handel, logistiek, verwerking",,,,,,,600,,0,0,0,0,0,0,0
+Allround Cargo Handling ,-,Logistiek,15,1,25,1,150,200,600,9000,9000,15000,600,270,105,162,0.9
+Blankendaal Cold Stores B.V.,Koel/Vriesopslag,Logistiek,15,1,25,1,150,200,600,9000,9000,15000,600,270,105,162,0.9
+JP Fruit Packing Service,"Fruit (opslag, verpakken)",Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+Koring,"Expeditie, zakelijke dienstverlening",Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+Looije Packing,"Verpakken, behandelen groeten & fruit",Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+Meeder Group,"Fruit, groente, zuivel",Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+R&M Forwarding,Logistieke dienstverlening,Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+The Greenery,Voedsel,Logistiek,,,,,,,,,,,,0,0,0,0
+VDH Forwarding & Warenhousing B.V.,"Logistieke dienstverlening (warehousing, vervoer, etc.)",Logistiek,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+KivitsGoes Handling,-,"Logistiek, opslag",10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+A.F.L Barendrecht,"Fruit, groente","Logistiek, transport",20,1,35,1,200,250,600,12000,12000,21000,600,360,147,216,0.9
+Fresh Pack Logistics,Fruit,"Logistiek, transport",,,,,,,,,,,,,,,
+Frigoscandia B.V.,voedsel,"Logistiek, transport",15,1,30,1,200,250,600,9000,9000,18000,600,270,126,162,0.9
+Koninklijke Euser ,-,"Logistiek, transport",15,1,30,1,200,250,600,9000,9000,18000,600,270,126,162,0.9
+LCL Logistics,Logistiek dienstverlener perishables,"Logistiek, transport",15,1,30,1,200,250,600,9000,9000,18000,600,270,126,162,0.9
+VGK Cool Logistics B.V. ,Koel/Vrieslogistiek,"Logistiek, transport",55,2,60,2,200,250,600,33000,66000,36000,1200,990,252,1188,1.8
+Consistence,-,Vervoer,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+Dijco,-,Vervoer,10,0,20,0,150,200,600,6000,0,12000,0,180,84,0,0
+ReFruit B.V.,Avocado olie,Verwerking,8,0,10,0,50,100,600,4800,0,6000,0,144,42,0,0
+Davis Pure Foods B.V.,Voedsel,"Verwerking, logistiek",15,1,15,1,100,150,600,9000,9000,9000,600,270,63,162,0.9
+Lazy Foods ,"Levensmiddelen (dips, spreads)","Verwerking, productie",8,0,10,0,50,100,600,4800,0,6000,0,144,42,0,0

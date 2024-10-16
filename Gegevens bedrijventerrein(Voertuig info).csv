@@ -1,0 +1,5 @@
+Model,Voertuigtype,Brandstoftype,Brandstof verbruik L/100km,Brandstof verbruik L/1km,Tank capaciteit in L,Electriciteit verbruik kWh/100km,Electriciteit verbruik kWh/1km,Batterij capaciteit kW
+DAF XF,Vrachtwagen,Diesel,30,0.3,1200,294,2.94,
+Volkswagen Transporter,Bestelbus,Diesel,7,0.07,70,68.6,0.686,
+Volvo FH Electric,Vrachtwagen,Electrisch,,,,1.8,0.018,540
+Renault Kangoo Z.E.,Bestelbus,Electrisch,,,,0.15,0.0015,33
