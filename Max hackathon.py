@@ -323,20 +323,22 @@ verbruik_data["elektriciteit_verbruik_per_dag"] = verbruik_data["elektriciteit_v
 # Bekijk de resultaten
 print(verbruik_data[['bedrijf', 'oppervlakte', 'aardgas_verbruik', 'elektriciteit_verbruik', "aardgas_verbruik_per_dag", "elektriciteit_verbruik_per_dag"]])
 
-
-# In[ ]:
-
-
+verbruik_data["aardgas_verbruik_naar_kWh"] = verbruik_data["aardgas_verbruik"] * 10
+verbruik_data["aardgas_verbruik_per_dag_naar_kWh"] = verbruik_data["aardgas_verbruik_per_dag"] * 10
 
 
+# Bekijk de resultaten
+# print(verbruik_data[['bedrijf', 'oppervlakte', 'aardgas_verbruik', 'elektriciteit_verbruik', "aardgas_verbruik_per_dag", "elektriciteit_verbruik_per_dag"]])
+print(verbruik_data[["aardgas_verbruik","aardgas_verbruik_per_dag","aardgas_verbruik_naar_kWh","aardgas_verbruik_per_dag_naar_kWh", 'elektriciteit_verbruik']])
 
-# In[ ]:
+# Bereken de som van de opgegeven kolommen
+som_verbruik = verbruik_data[["aardgas_verbruik", "aardgas_verbruik_per_dag", 
+                               "aardgas_verbruik_naar_kWh", "aardgas_verbruik_per_dag_naar_kWh", 
+                               'elektriciteit_verbruik']].sum()
 
-
-
-
-
-# In[ ]:
+# Print de som
+print("\nSom van de verbruik kolommen:")
+print(som_verbruik)
 
 
 
