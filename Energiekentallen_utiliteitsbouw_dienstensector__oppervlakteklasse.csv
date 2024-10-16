@@ -1,0 +1,27 @@
+Onderwerp;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld aardgasverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik;Gemiddeld elektriciteitsverbruik
+Oppervlakteklasse;0 tot 250 m²;250 tot 500 m²;500 tot 1 000 m²;1 000 tot 2 500 m²;2 500 tot 5 000 m²;5 000 tot 10 000 m²;10 000 tot 25 000 m²;0 tot 250 m²;250 tot 500 m²;500 tot 1 000 m²;1 000 tot 2 500 m²;2 500 tot 5 000 m²;5 000 tot 10 000 m²;10 000 tot 25 000 m²
+Utiliteitsbouw dienstensector;m3/m2;m3/m2;m3/m2;m3/m2;m3/m2;m3/m2;m3/m2;kWh/m2;kWh/m2;kWh/m2;kWh/m2;kWh/m2;kWh/m2;kWh/m2
+Detailhandel met koeling;18,7;17,2;13,7;11,1;7,3;.;.;231,8;174,8;243,6;279,7;201,8;.;.
+Detailhandel zonder koeling;17;11,9;8,8;6,9;6,2;5,8;6,4;105,2;84,8;70,6;76,1;70;64,7;74,1
+Groothandel met koeling;18,1;12,3;9;8,2;7;.;.;95,6;83,8;126,2;178,9;139,5;173,8;.
+Groothandel zonder koeling;16,6;11,9;8,9;7,3;6,7;6;6,6;64,9;50,9;46,1;47,3;50;53,7;69,8
+Autobedrijf: showroom en garage;17,7;11;8,8;8,5;8;7,6;.;60,3;44,2;42,8;46,9;51,9;52,7;.
+Autobedrijf: autoschadeherstelbedrijven;16,3;12,1;12,1;12,4;9,2;.;.;61,7;52,3;53;55,6;52,9;.;.
+Horeca: café;22,4;17,4;14,4;10,9;.;.;.;146;117,5;90,8;73,2;.;.;.
+Horeca: restaurant;37,4;33,1;26,5;21,3;.;.;.;227,8;184,2;149,5;127,3;.;.;.
+Horeca: cafetaria;38,1;28,7;24,3;.;.;.;.;265,3;172,5;201,5;179,4;.;.;.
+Horeca: hotels, motels;22,8;22,6;21,9;21,3;21,1;22;21,2;64,9;71,5;85,1;97,6;107,7;112,1;114
+Kantoor: overheid;20,9;18,3;16,2;13,3;11;10,5;11,6;60;49,5;51;57;85,2;90,8;84,1
+Kantoor: overig;17,3;15;12,8;10,9;10,7;10,6;10,9;57,2;50,8;54,9;66,3;76,1;75,8;90,9
+Onderwijs: primair;16,6;18,7;15,1;12;7,9;4,7;.;38,6;34,4;29,8;27,6;25,5;21;.
+Onderwijs: secundair;.;.;18,2;14,8;11,8;10,1;7,5;.;36,3;40,6;40;43,4;41,7;33,4
+Onderwijs: MBO en praktijk;.;.;15,4;14;12,3;10,5;8,9;.;.;48,9;49,3;48,2;49,4;54,2
+Gezondheidszorg: bijeenkomst;17,6;15,8;14,3;12,2;9,2;.;.;43,9;40,6;40,8;37,7;31,4;.;.
+Gezondheidszorg: praktijk;17,4;14,8;13;12,4;12;.;.;59,8;51,9;53,5;58,4;71,5;.;.
+Gezondheidszorg: tehuis;18,5;19,2;17,3;15,9;18,1;19,6;17,3;49,6;57,1;54,8;57,4;66;66,5;56,4
+Recreatie: vereniging;17,9;14,4;11,2;9,1;.;.;.;48,5;36,5;30,5;30,3;.;.;.
+Recreatie: binnensport;17,4;16,7;13,2;11,4;9,6;10,5;.;54,9;42,6;52,6;59;55,1;58,2;.
+Recreatie: zwembad;62,3;48,7;48,6;52,1;55,6;.;.;173,7;141,4;138,9;153,5;132,2;.;.
+Recreatie: buitensport;16,8;15,9;14;9,7;5,3;.;.;87,4;79,8;65;51,4;31,4;.;.
+Overig: haar- en schoonheidsverzorging;20,2;13,8;11,3;.;.;.;.;79;49,9;41,4;.;.;.;.
+Overig: religie;18,4;15,7;13,6;10,1;6,1;.;.;25,4;19,8;18;17,2;19,3;.;.
