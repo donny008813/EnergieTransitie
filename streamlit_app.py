@@ -3,8 +3,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('monthly_hourly_load_values_2023.csv', sep = '\t')
-toekomst = pd.read_csv('Uitkomsten python Dutch Fresh port (Met afronding en juiste getallen).csv', sep = ';')
+url_load_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/monthly_hourly_load_values_2023.csv'
+url_DFP_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/Uitkomsten python Dutch Fresh port (Met afronding en juiste getallen).csv'
+data = pd.read_csv(url_load_csv, sep = '\t')
+toekomst = pd.read_csv(url_DFP_csv, sep = ';')
 
 data_nl = data[data['CountryCode'] == 'NL']
 
