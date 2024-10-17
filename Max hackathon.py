@@ -343,3 +343,32 @@ print(som_verbruik)
 
 
 
+# Definities
+start_year = 2022
+end_year = 2040
+initial_area = 370_000  # m²
+increase_rate = 11_111.11  # m² per jaar
+initial_energy_use = 22_103_475  # kWh per jaar
+avg_energy_per_m2 = 123.83  # kWh/m²
+
+# Lijsten voor jaren, oppervlakte en totaal energieverbruik
+years = list(range(start_year, end_year + 1))
+areas = []
+total_energy = []
+
+# Berekeningen
+for year in years:
+    area = initial_area + increase_rate * (year - start_year)
+    total_energy_use = initial_energy_use + (increase_rate * (year - start_year)) * avg_energy_per_m2
+    areas.append(area)
+    total_energy.append(total_energy_use)
+
+# Creëer een DataFrame
+results_df = pd.DataFrame({
+    'Jaar': years,
+    'Oppervlakte (m²)': areas,
+    'Totaal Energieverbruik (kWh)': total_energy
+})
+
+# Weergave van de resultaten
+print(results_df)
