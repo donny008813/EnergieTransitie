@@ -210,19 +210,17 @@ data_nl['Dag_nummer'] = data_nl['Dag_nummer'].astype(int)
 data_nl['Maand_nummer'] = data_nl['DateUTC'].dt.month
 data_nl['Maand_nummer'] = data_nl['Maand_nummer'].astype(int)
 
+########################################################################### Plotjes en streamlit
 st.set_page_config(page_title="Energie verbruik gebouwen")
 st.markdown("# Energie verbruik gebouwen")
 st.sidebar.header("Energie verbruik gebouwen")
 
-# Line plot using seaborn to visualize energy over time
-plt.figure(figsize=(14,6))
-sns.lineplot(data=data_nl, x='DateUTC', y='energie verbruik gebouw', linewidth=1)
-plt.title('Energy Consumption Per Hour in 2023')
-plt.xlabel('Datetime')
-plt.ylabel('Energy (kWh)')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
+# Set up the dropdown menu for the line plot
+st.title('Energy Consumption Visualizations')
+line_plot_option = st.selectbox(
+    'Select time granularity for energy consumption plot:',
+    ['Per Hour', 'Per Day', 'Per Month']
+)
 
 # Step 1: Aggregate the data by day (sum energy consumption for each day)
 data_nl['date'] = data_nl['DateUTC'].dt.date  # Extract just the date (without time)
@@ -235,30 +233,71 @@ monthly_energy = data_nl.groupby('Maand')['energie verbruik gebouw'].sum().reset
 # Convert 'month' to string format for plotting
 monthly_energy['Maand'] = monthly_energy['Maand'].dt.to_timestamp()
 
-# Step 3: Plot the energy consumption for each day over the year
-plt.figure(figsize=(14, 6))
-sns.lineplot(data=daily_energy, x='date', y='energie verbruik gebouw', linewidth=1.5)
-plt.title('Energy Consumption Per Day Over the Year (2023)', fontsize=14)
-plt.xlabel('Date', fontsize=12)
-plt.ylabel('Total Energy (kWh)', fontsize=12)
-plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+if line_plot_option == 'Per Hour':
+    st.header('Energy Consumption Per Hour in 2023')
+    plt.figure(figsize=(14, 6))
+    sns.lineplot(data=data_nl, x='DateUTC', y='energie verbruik gebouw', linewidth=1)
+    plt.title('Energy Consumption Per Hour in 2023')
+    plt.xlabel('Datetime')
+    plt.ylabel('Energy (kWh)')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    st.pyplot(plt)
 
-# Step 4: Plot the energy consumption for each month over the year
-plt.figure(figsize=(10, 6))
-sns.lineplot(data=monthly_energy, x='Maand', y='energie verbruik gebouw', linewidth=2)
-plt.title('Energy Consumption Per Month Over the Year (2023)', fontsize=14)
-plt.xlabel('Month', fontsize=12)
-plt.ylabel('Total Energy (kWh)', fontsize=12)
-plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+elif line_plot_option == 'Per Day':
+    st.header('Energy Consumption Per Day Over the Year (2023)')
+    plt.figure(figsize=(14, 6))
+    sns.lineplot(data=daily_energy, x='date', y='energie verbruik gebouw', linewidth=1.5)
+    plt.title('Energy Consumption Per Day Over the Year (2023)')
+    plt.xlabel('Date')
+    plt.ylabel('Total Energy (kWh)')
+    plt.xticks(rotation=45)
+    plt.grid(True)
+    plt.tight_layout()
+    st.pyplot(plt)
+
+elif line_plot_option == 'Per Month':
+    st.header('Energy Consumption Per Month Over the Year (2023)')
+    plt.figure(figsize=(10, 6))
+    sns.lineplot(data=monthly_energy, x='Maand', y='energie verbruik gebouw', linewidth=2)
+    plt.title('Energy Consumption Per Month Over the Year (2023)')
+    plt.xlabel('Month')
+    plt.ylabel('Total Energy (kWh)')
+    plt.xticks(rotation=45)
+    plt.grid(True)
+    plt.tight_layout()
+    st.pyplot(plt)
 
 # Setting the datetime as the index
 data_nl.set_index('DateUTC', inplace=True)
+
+# Group by day and sum the values
+daily_data = data_nl.groupby('Dag_nummer')[['energie verbruik detailhandel koeling',
+                                            'energie verbruik detailhandel',
+                                            'energie verbruik groothandel koeling',
+                                            'energie verbruik groothandel',
+                                            'energie verbruik transport',
+                                            'gas verbruik gebouw',
+                                            'diesel verbruik']].sum().reset_index()
+
+# Group by month and sum the values
+monthly_data = data_nl.groupby('Maand_nummer')[['energie verbruik detailhandel koeling',
+                                            'energie verbruik detailhandel',
+                                            'energie verbruik groothandel koeling',
+                                            'energie verbruik groothandel',
+                                            'energie verbruik transport',
+                                            'gas verbruik gebouw',
+                                            'diesel verbruik']].sum().reset_index()
+
+
+# Group by hour and sum the values
+hourly_data = data_nl.groupby('Uur')[['energie verbruik detailhandel koeling',
+                                            'energie verbruik detailhandel',
+                                            'energie verbruik groothandel koeling',
+                                            'energie verbruik groothandel',
+                                            'energie verbruik transport',
+                                            'gas verbruik gebouw',
+                                      'diesel verbruik']].sum().reset_index()
 
 # Plotting the stacked area plot
 plt.figure(figsize=(14, 8))
@@ -283,40 +322,6 @@ plt.grid(True)
 # Show plot
 plt.tight_layout()
 plt.show()
-
-# Group by day and sum the values
-print(data_nl['Dag_nummer'])
-daily_data = data_nl.groupby('Dag_nummer')[['energie verbruik detailhandel koeling',
-                                            'energie verbruik detailhandel',
-                                            'energie verbruik groothandel koeling',
-                                            'energie verbruik groothandel',
-                                            'energie verbruik transport',
-                                            'gas verbruik gebouw',
-                                            'diesel verbruik']].sum().reset_index()
-
-# Display the daily aggregated data
-print(daily_data)
-
-# Group by month and sum the values
-monthly_data = data_nl.groupby('Maand_nummer')[['energie verbruik detailhandel koeling',
-                                            'energie verbruik detailhandel',
-                                            'energie verbruik groothandel koeling',
-                                            'energie verbruik groothandel',
-                                            'energie verbruik transport',
-                                            'gas verbruik gebouw',
-                                            'diesel verbruik']].sum().reset_index()
-
-# Display the monthly aggregated data
-print(monthly_data)
-
-# Group by hour and sum the values
-hourly_data = data_nl.groupby('Uur')[['energie verbruik detailhandel koeling',
-                                            'energie verbruik detailhandel',
-                                            'energie verbruik groothandel koeling',
-                                            'energie verbruik groothandel',
-                                            'energie verbruik transport',
-                                            'gas verbruik gebouw',
-                                      'diesel verbruik']].sum().reset_index()
 
 # Plotting the daily patterns
 plt.figure(figsize=(14, 8))
