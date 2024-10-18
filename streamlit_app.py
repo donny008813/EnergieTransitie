@@ -3,6 +3,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+st.set_page_config(
+    page_title="Bepalen van de energie behoefte van een industrieterrein"
+)
+
 url_load_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/monthly_hourly_load_values_2023.csv'
 url_DFP_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/UitkomstenPythonDutchFreshPort(MetAfrondingEnJuisteGetallen).csv'
 data = pd.read_csv(url_load_csv, sep = '\t')
