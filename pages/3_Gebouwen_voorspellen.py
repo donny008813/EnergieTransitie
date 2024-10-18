@@ -242,6 +242,9 @@ def plot_energy_consumption(data_nl, time_frame='hourly'):
 st.set_page_config(page_title="Energie verbruik gebouwen voor de toekomst")
 st.markdown("# Energie Verbruik Gebouwen Toekomst")
 st.sidebar.header("Energie verbruik gebouwen Toekomst")
+st.write('Hier wordt het energieverbruik per toekomstig jaar getoond over de tijd. Dit kan in verschillende tijdseenheden gedaan worden.')
+st.write('Deze nieuwe en veranderende energiegebruik is gebasseerd op de vierkante meters en type bedrijven wat er nog bij zouden kunnen op het terrein.')
+st.write('Voor een ander bedrijven terrein kan dit ook toegepast worden door de oppervlakte en type bedrijven aan te leveren.')
 
 # Dropdown for time frame selection
 time_frame = st.selectbox("Select Time Frame:", ["hourly", "daily", "monthly"])
