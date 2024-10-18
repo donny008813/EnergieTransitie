@@ -16,7 +16,7 @@ uren1 = np.arange(0, 24, 1)
 kw_normale_oplader = [6652.8, 4752.0, 2851.2, 2280.96, 1900.8, 1425.6, 950.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 19008.0, 19008.0, 18057.6, 17107.2, 16156.8, 14256.0, 9504.0]
 
 # Streamlit App Title
-st.title("Electric Vehicle Data Visualization")
+st.title("Vrachtwagens Data Visualization")
 
 # Plot 1: Bar Plot of Electric Building Usage
 st.subheader("Bar Plot: Electric Building Usage (MVA)")
