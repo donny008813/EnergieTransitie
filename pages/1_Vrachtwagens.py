@@ -25,7 +25,7 @@ g_daily = g ** (1 / 365)
 
 # Bereken N voor elke maand
 N_per_month = [b * (g_daily ** month) for month in range(365)]
-N_per_month
+
 
 #van kwh naar Mva en van aantal wagens naar kwh per oplaadbeurt
 elek_vspel_kwh = [x * 10.8 for x in elek_vspel1]
@@ -46,7 +46,7 @@ st.write("Hier zal worden getoond waar naar is gekeken om de energie behoefte va
 st.write('Hier zijn de type vrachtwagens en bestelbussen die zijn gebruikt voor de berekeningen')
 csv_url = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/Gegevens_bedrijventerrein_Voertuig_info.csv'
 voertuigen = pd.read_csv(csv_url)
-print(voertuigen)
+voertuigen
 
 # Plot 2: Line Plot for Electric Vehicle Predictions
 st.subheader("Line Plot: Electric Vehicle Predictions")
