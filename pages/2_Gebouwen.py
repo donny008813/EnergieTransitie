@@ -214,6 +214,8 @@ data_nl['Maand_nummer'] = data_nl['Maand_nummer'].astype(int)
 st.set_page_config(page_title="Energie verbruik gebouwen")
 st.markdown("# Energie Verbruik Gebouwen Huidig")
 st.sidebar.header("Energie verbruik gebouwen")
+st.write('Hier zal worden getoond hoe het energieverbruik van het terrein is over de tijd. En ook opgedeeld in verschillende sectoren die aanwezig waren.')
+st.write('Ook wordt niet alleen het energieverbruik getoond, maar de hele energievraag van het terrein. Dit bestaat ook uit gasverbruik en brandstof verbruik.')
 
 # Set up the dropdown menu for the line plot
 line_plot_option = st.selectbox(
