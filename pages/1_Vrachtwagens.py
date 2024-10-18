@@ -7,10 +7,8 @@ import streamlit as st
 
 
 elek_vspel = [800, 1464, 2679.12, 4901.997, 8968.67, 16406.2, 30004.15]
-print(elek_vspel)
 
 jaren_elek_vspel = [2024, 2025, 2026, 2027, 2028, 2029, 2030]
-print(jaren_elek_vspel)
 
 grenslijn = [30000, 30000, 30000, 30000, 30000, 30000, 30000]
 
@@ -32,18 +30,15 @@ N_per_month
 #van kwh naar Mva en van aantal wagens naar kwh per oplaadbeurt
 elek_vspel_kwh = [x * 10.8 for x in elek_vspel1]
 elek_vspel_Mva = [x / 1000 for x in elek_vspel_kwh]
-print(elek_vspel_Mva)
 
 elek_vspel_diel = [x * 180 for x in elek_vspel_die]
 tussen_diel = [x / 0.3 for x in elek_vspel_diel]
 diel_kwh = [x * 0.018 for x in tussen_diel]
-print(diel_kwh)
 
 elek_gebouw = [14.762, 15.36, 15.98, 16.63, 17.30, 18.0, 18.73]
 #MVA hier je groeifactor vandaan halen
 
 totaal_Mva = np.array([elek_vspel_Mva]) + np.array([elek_gebouw])
-print(totaal_Mva)
 
 # Streamlit App Title
 st.title("Vrachtwagens Data Visualization")
