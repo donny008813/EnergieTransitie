@@ -10,7 +10,7 @@ st.set_page_config(
 # Streamlit app layout
 st.title("Energie Verbruik Dashboard")
 st.markdown('''Op deze dashboard zal worden getoond hoe de energie behoefte van een industrieterrein is bepaald. 
-Hiervoor is de beschikbare data van Dutch Fresh Port, data van het CBS, data van Entso-e, data van modeltype vrachtwagen en data beschikbaar gesteld voor de Case gebruikt. 
+Hiervoor is beschikbare data van Dutch Fresh Port, data van het CBS, data van Entso-e, data van modeltype vrachtwagen en data beschikbaar gesteld voor de Case gebruikt. 
 
 Met deze informatie is er eerst een beeld gemaakt specifiek voor dit terrein. Er wordt gekeken naar de volgende eigenschappen:
 - Energie verbuik van de huidige en toekomstige vrachtwagen aantallen
