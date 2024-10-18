@@ -120,28 +120,28 @@ def calculate_value(area, business_type):
             return "Energy usage data not available for areas larger than 5000 m²."
         else:
             total_energy_usage = area * energy_usage
-            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} m³"
+            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} kWh"
     elif business_type == "Detailhandel zonder Koeling":
         energy_usage = get_energy_usage_without_cooling(area)
         if energy_usage is None:
-            return "Energy usage data not available for areas larger than 10,000 m²."
+            return "Energy usage data not available for areas larger than 25,000 m²."
         else:
             total_energy_usage = area * energy_usage
-            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} m³"
+            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} kWh"
     elif business_type == "Groothandel met Koeling":
         energy_usage = get_energy_usage_groothandel_with_cooling(area)
         if energy_usage is None:
             return "Energy usage data not available for areas larger than 5000 m²."
         else:
             total_energy_usage = area * energy_usage
-            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} m³"
+            return f"Total energy usage for {area} m²: {total_energy_usage:.2f} kWh"
     elif business_type == "Groothandel zonder Koeling":
         energy_usage = get_energy_usage_groothandel_without_cooling(area)
         if energy_usage is None:
             return "Energy usage data not available for areas larger than 10,000 m²."
         else:
             total_energy_usage = area * energy_usage
-            return f"Total energy usage for {area} m²: {total_gas_usage:.2f} m³"
+            return f"Total energy usage for {area} m²: {total_gas_usage:.2f} kWh"
     else:
         return 0
 
