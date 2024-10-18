@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+import streamlit as st
 
 
 elek_vspel = [800, 1464, 2679.12, 4901.997, 8968.67, 16406.2, 30004.15]
