@@ -44,7 +44,7 @@ totaal_Mva = np.array([elek_vspel_Mva]) + np.array([elek_gebouw])
 st.title("Vrachtwagens Data Visualization")
 st.write("Hier zal worden getoond waar naar is gekeken om de energie behoefte van de vrachtwagens te bepalen. En wat er zal gaan gebeuren over de jaren als deze elektrisch worden")
 st.write('Hier zijn de type vrachtwagens en bestelbussen die zijn gebruikt voor de berekeningen')
-csv_url = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/Gegevens bedrijventerrein(Voertuig info)(in).csv'
+csv_url = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/Gegevens_bedrijventerrein_Voertuig_info.csv'
 voertuigen = pd.read_csv(csv_url)
 print(voertuigen)
 
