@@ -299,98 +299,65 @@ hourly_data = data_nl.groupby('Uur')[['energie verbruik detailhandel koeling',
                                             'gas verbruik gebouw',
                                       'diesel verbruik']].sum().reset_index()
 
-# Plotting the stacked area plot
-plt.figure(figsize=(14, 8))
+# Set up the dropdown menu for the stacked area plot
+stacked_plot_option = st.selectbox(
+    'Select time granularity for stacked area plot:',
+    ['Hourly', 'Daily', 'Monthly']
+)
 
-# Creating the stacked area plot
-plt.stackplot(data_nl.index, data_nl['energie verbruik detailhandel koeling'],
-              data_nl['energie verbruik detailhandel'],
-              data_nl['energie verbruik groothandel koeling'], data_nl['energie verbruik groothandel'],
-              data_nl['energie verbruik transport'], data_nl['gas verbruik gebouw'], data_nl['diesel verbruik'],
-              labels=['Detailhandel koeling (kWh)','Detailhandel zonder koeling (kWh)','Groothandel koeling (kWh)'
-                  ,'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
-              alpha=0.7)
+if stacked_plot_option == 'Hourly':
+    st.header('Hourly Energy and Gas Usage in 2023')
+    plt.figure(figsize=(14, 8))
+    plt.stackplot(hourly_data['Uur'], hourly_data['energie verbruik detailhandel koeling'],
+                  hourly_data['energie verbruik detailhandel'],
+                  hourly_data['energie verbruik groothandel koeling'], hourly_data['energie verbruik groothandel'],
+                  hourly_data['energie verbruik transport'], hourly_data['gas verbruik gebouw'],
+                  labels=['Detailhandel koeling (kWh)', 'Detailhandel zonder koeling (kWh)', 'Groothandel koeling (kWh)',
+                          'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
+                  alpha=0.7)
+    plt.title('Hourly Energy and Gas Usage in 2023')
+    plt.xlabel('Hour of the Day')
+    plt.ylabel('Usage')
+    plt.xticks(hourly_data['Uur'])
+    plt.legend(loc='upper left')
+    plt.grid(True)
+    plt.tight_layout()
+    st.pyplot(plt)
 
-# Customizing the plot
-plt.title('Hourly Energy and Gas Usage in 2023', fontsize=16)
-plt.xlabel('Date', fontsize=14)
-plt.ylabel('Usage', fontsize=14)
-plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
-plt.legend(loc='upper left')
-plt.grid(True)
+elif stacked_plot_option == 'Daily':
+    st.header('Daily Energy and Gas Usage')
+    plt.figure(figsize=(14, 8))
+    plt.stackplot(daily_data['Dag_nummer'], daily_data['energie verbruik detailhandel koeling'],
+                  daily_data['energie verbruik detailhandel'],
+                  daily_data['energie verbruik groothandel koeling'], daily_data['energie verbruik groothandel'],
+                  daily_data['energie verbruik transport'], daily_data['gas verbruik gebouw'], daily_data['diesel verbruik'],
+                  labels=['Detailhandel koeling (kWh)', 'Detailhandel zonder koeling (kWh)', 'Groothandel koeling (kWh)',
+                          'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
+                  alpha=0.7)
+    plt.title('Daily Energy and Gas Usage')
+    plt.xlabel('Day of the Month')
+    plt.ylabel('Usage')
+    plt.xticks(daily_data['Dag_nummer'])
+    plt.legend(loc='upper left')
+    plt.grid(True)
+    plt.tight_layout()
+    st.pyplot(plt)
 
-# Show plot
-plt.tight_layout()
-plt.show()
-
-# Plotting the daily patterns
-plt.figure(figsize=(14, 8))
-
-# Creating the stacked area plot for daily data
-plt.stackplot(daily_data['Dag_nummer'], daily_data['energie verbruik detailhandel koeling'],
-              daily_data['energie verbruik detailhandel'],
-              daily_data['energie verbruik groothandel koeling'], daily_data['energie verbruik groothandel'],
-              daily_data['energie verbruik transport'], daily_data['gas verbruik gebouw'], daily_data['diesel verbruik'],
-              labels=['Detailhandel koeling (kWh)','Detailhandel zonder koeling (kWh)','Groothandel koeling (kWh)'
-                  ,'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
-              alpha=0.7)
-
-# Customizing the plot
-plt.title('Daily Energy and Gas Usage', fontsize=16)
-plt.xlabel('Day of the Month', fontsize=14)
-plt.ylabel('Usage', fontsize=14)
-plt.xticks(daily_data['Dag_nummer'])  # Show each day on the x-axis
-plt.legend(loc='upper left')
-plt.grid(True)
-
-# Show plot
-plt.tight_layout()
-plt.show()
-
-# Plotting the monthly patterns
-plt.figure(figsize=(14, 8))
-
-# Creating the stacked area plot for monthly data
-plt.stackplot(monthly_data['Maand_nummer'], monthly_data['energie verbruik detailhandel koeling'],
-              monthly_data['energie verbruik detailhandel'],
-              monthly_data['energie verbruik groothandel koeling'], monthly_data['energie verbruik groothandel'],
-              monthly_data['energie verbruik transport'], monthly_data['gas verbruik gebouw'],
-              labels=['Detailhandel koeling (kWh)','Detailhandel zonder koeling (kWh)','Groothandel koeling (kWh)'
-                  ,'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
-              alpha=0.7)
-
-# Customizing the plot
-plt.title('Monthly Energy and Gas Usage', fontsize=16)
-plt.xlabel('Month', fontsize=14)
-plt.ylabel('Usage', fontsize=14)
-plt.xticks(monthly_data['Maand_nummer'])  # Show each month on the x-axis
-plt.legend(loc='upper left')
-plt.grid(True)
-
-# Show plot
-plt.tight_layout()
-plt.show()
-
-# Plotting the hourly data
-plt.figure(figsize=(14, 8))
-
-# Creating a stacked area plot for hourly data
-plt.stackplot(hourly_data['Uur'], hourly_data['energie verbruik detailhandel koeling'],
-              hourly_data['energie verbruik detailhandel'],
-              hourly_data['energie verbruik groothandel koeling'], hourly_data['energie verbruik groothandel'],
-              hourly_data['energie verbruik transport'], hourly_data['gas verbruik gebouw'],
-              labels=['Detailhandel koeling (kWh)','Detailhandel zonder koeling (kWh)','Groothandel koeling (kWh)'
-                  ,'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
-              alpha=0.7)
-
-# Customizing the plot
-plt.title('Hourly Energy and Gas Usage', fontsize=16)
-plt.xlabel('Hour of the Day', fontsize=14)
-plt.ylabel('Usage', fontsize=14)
-plt.xticks(hourly_data['Uur'])  # Show each hour on the x-axis
-plt.legend(loc='upper left')
-plt.grid(True)
-
-# Show plot
-plt.tight_layout()
-plt.show()
+elif stacked_plot_option == 'Monthly':
+    st.header('Monthly Energy and Gas Usage')
+    plt.figure(figsize=(14, 8))
+    plt.stackplot(monthly_data['Maand_nummer'], monthly_data['energie verbruik detailhandel koeling'],
+                  monthly_data['energie verbruik detailhandel'],
+                  monthly_data['energie verbruik groothandel koeling'], monthly_data['energie verbruik groothandel'],
+                  monthly_data['energie verbruik transport'], monthly_data['gas verbruik gebouw'],
+                  labels=['Detailhandel koeling (kWh)', 'Detailhandel zonder koeling (kWh)', 'Groothandel koeling (kWh)',
+                          'Groothandel zonder koeling (kWh)', 'Transport (kWh)', 'Gas Usage (kWh)', 'Brandstof (kWh)'],
+                  alpha=0.7)
+    plt.title('Monthly Energy and Gas Usage')
+    plt.xlabel('Month')
+    plt.ylabel('Usage')
+    plt.xticks(monthly_data['Maand_nummer'])
+    plt.legend(loc='upper left')
+    plt.grid(True)
+    plt.tight_layout()
+    st.pyplot(plt)
