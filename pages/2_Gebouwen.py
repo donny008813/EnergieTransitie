@@ -212,11 +212,10 @@ data_nl['Maand_nummer'] = data_nl['Maand_nummer'].astype(int)
 
 ########################################################################### Plotjes en streamlit
 st.set_page_config(page_title="Energie verbruik gebouwen")
-st.markdown("# Energie verbruik gebouwen")
+st.markdown("# Energie Verbruik Gebouwen Huidig")
 st.sidebar.header("Energie verbruik gebouwen")
 
 # Set up the dropdown menu for the line plot
-st.title('Energy Consumption Visualizations')
 line_plot_option = st.selectbox(
     'Select time granularity for energy consumption plot:',
     ['Per Hour', 'Per Day', 'Per Month']
@@ -234,10 +233,10 @@ monthly_energy = data_nl.groupby('Maand')['energie verbruik gebouw'].sum().reset
 monthly_energy['Maand'] = monthly_energy['Maand'].dt.to_timestamp()
 
 if line_plot_option == 'Per Hour':
-    st.header('Energy Consumption Per Hour in 2023')
+    st.header('Energy Consumption Per Hour')
     plt.figure(figsize=(14, 6))
     sns.lineplot(data=data_nl, x='DateUTC', y='energie verbruik gebouw', linewidth=1)
-    plt.title('Energy Consumption Per Hour in 2023')
+    plt.title('Energy Consumption Per Hour')
     plt.xlabel('Datetime')
     plt.ylabel('Energy (kWh)')
     plt.xticks(rotation=45)
@@ -245,10 +244,10 @@ if line_plot_option == 'Per Hour':
     st.pyplot(plt)
 
 elif line_plot_option == 'Per Day':
-    st.header('Energy Consumption Per Day Over the Year (2023)')
+    st.header('Energy Consumption Per Day Over the Year')
     plt.figure(figsize=(14, 6))
     sns.lineplot(data=daily_energy, x='date', y='energie verbruik gebouw', linewidth=1.5)
-    plt.title('Energy Consumption Per Day Over the Year (2023)')
+    plt.title('Energy Consumption Per Day Over the Year')
     plt.xlabel('Date')
     plt.ylabel('Total Energy (kWh)')
     plt.xticks(rotation=45)
@@ -257,10 +256,10 @@ elif line_plot_option == 'Per Day':
     st.pyplot(plt)
 
 elif line_plot_option == 'Per Month':
-    st.header('Energy Consumption Per Month Over the Year (2023)')
+    st.header('Energy Consumption Per Month Over the Year')
     plt.figure(figsize=(10, 6))
     sns.lineplot(data=monthly_energy, x='Maand', y='energie verbruik gebouw', linewidth=2)
-    plt.title('Energy Consumption Per Month Over the Year (2023)')
+    plt.title('Energy Consumption Per Month Over the Year')
     plt.xlabel('Month')
     plt.ylabel('Total Energy (kWh)')
     plt.xticks(rotation=45)
