@@ -240,6 +240,7 @@ if line_plot_option == 'Per Hour':
     plt.xlabel('Datetime')
     plt.ylabel('Energy (kWh)')
     plt.xticks(rotation=45)
+    plt.xticks([], [])
     plt.tight_layout()
     st.pyplot(plt)
 
@@ -251,6 +252,7 @@ elif line_plot_option == 'Per Day':
     plt.xlabel('Date')
     plt.ylabel('Total Energy (kWh)')
     plt.xticks(rotation=45)
+    plt.xticks([], [])
     plt.grid(True)
     plt.tight_layout()
     st.pyplot(plt)
@@ -263,6 +265,7 @@ elif line_plot_option == 'Per Month':
     plt.xlabel('Month')
     plt.ylabel('Total Energy (kWh)')
     plt.xticks(rotation=45)
+    plt.xticks([], [])
     plt.grid(True)
     plt.tight_layout()
     st.pyplot(plt)
@@ -288,6 +291,7 @@ plt.title('Hourly Energy and Gas Usage in 2023', fontsize=16)
 plt.xlabel('Date', fontsize=14)
 plt.ylabel('Usage', fontsize=14)
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.xticks([], [])
 plt.legend(loc='upper left')
 plt.grid(True)
 
