@@ -42,6 +42,7 @@ totaal_Mva = np.array([elek_vspel_Mva]) + np.array([elek_gebouw])
 
 # Streamlit App Title
 st.title("Vrachtwagens Data Visualization")
+st.write("Hier zal worden getoond waar naar is gekeken om de energie behoefte van de vrachtwagens te bepalen. En wat er zal gaan gebeuren over de jaren als deze elektrisch worden")
 
 # Plot 2: Line Plot for Electric Vehicle Predictions
 st.subheader("Line Plot: Electric Vehicle Predictions")
