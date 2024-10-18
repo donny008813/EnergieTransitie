@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Laad de datasets
-verbruik_data = pd.read_csv("Oppervlakte3.csv", sep=';')
-data = pd.read_csv('monthly_hourly_load_values_2023.csv', sep = '\t')
+url_load_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/monthly_hourly_load_values_2023.csv'
+url_opp_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/Oppervlakte3.csv'
+verbruik_data = pd.read_csv(url_opp_csv, sep=';')
+data = pd.read_csv(url_load_csv, sep = '\t')
 
 # Functie om verbruik te berekenen met dictionaries
 def bereken_verbruik_met_dict(verbruik_data):
