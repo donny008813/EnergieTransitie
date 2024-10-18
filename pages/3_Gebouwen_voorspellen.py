@@ -3,10 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="Energie verbruik gebouwen voor de toekomst")
-st.markdown("# Energie Verbruik Gebouwen Toekomst")
-st.sidebar.header("Energie verbruik gebouwen Toekomst")
-
 url_load_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/monthly_hourly_load_values_2023.csv'
 url_DFP_csv = 'https://raw.githubusercontent.com/donny008813/EnergieTransitie/main/UitkomstenPythonDutchFreshPort(MetAfrondingEnJuisteGetallen).csv'
 data = pd.read_csv(url_load_csv, sep = '\t')
@@ -243,7 +239,9 @@ def plot_energy_consumption(data_nl, time_frame='hourly'):
     st.pyplot(fig)  # Display the plot in Streamlit
 
 # Streamlit app layout
-st.title("Energy Consumption Dashboard")
+st.set_page_config(page_title="Energie verbruik gebouwen voor de toekomst")
+st.markdown("# Energie Verbruik Gebouwen Toekomst")
+st.sidebar.header("Energie verbruik gebouwen Toekomst")
 
 # Dropdown for time frame selection
 time_frame = st.selectbox("Select Time Frame:", ["hourly", "daily", "monthly"])
